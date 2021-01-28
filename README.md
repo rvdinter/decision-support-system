@@ -1,2 +1,2 @@
 # slr-study-selection
-Simple NNs for study selection of literature in the SLR process
+Multichannel CNNs for study selection of literature in the SLR process
