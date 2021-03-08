@@ -73,7 +73,7 @@ class Preprocessor:
         # Create a vocabulary consisting of all data samples
         full_dataset = pd.concat([self._train, self._test])
         self._create_vocab(full_dataset)
-        self._steps_per_epoch = self.calculate_steps_per_epoch(full_dataset, batch_size)
+        self._steps_per_epoch = self.calculate_steps_per_epoch(self._train, batch_size)
 
         # Clean title and abstract based on vocab, with minimum of 2 occurences per word
         self._train['text'] = self._train['text'].apply(lambda text: self._clean_text(text))
